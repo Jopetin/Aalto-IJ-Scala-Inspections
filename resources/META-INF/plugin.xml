@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>fi.aalto.cs.inspections</id>
+    <name>Aalto Scala Inspections</name>
+    <version>0.0.1-SNAPSHOT</version>
+    <vendor>LeTech Group at Aalto University</vendor>
+
+    <description>A Scala plugin that expands the initial set of code inspections</description>
+
+    <idea-version since-build="231.0"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.properties</depends>
+    <depends>org.intellij.scala</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <localInspection implementationClass="org.jetbrains.plugins.scala.codeInspection.collections.OptionGetInspection"
+                         bundle="messages.InspectionBundle"
+                         key="inspection.illegal.option.get.usage.display.name"
+                         groupBundle="messages.ScalaInspectionBundle" groupPathKey="grouppath.scala.collections" groupKey="group.options"
+                         shortName="IllegalOptionGet" level="ERROR"
+                         enabledByDefault="false" language="Scala"/>
+    </extensions>
+
+</idea-plugin>

@@ -1,0 +1,34 @@
+<html>
+<body>
+<p>
+    Reports usage of <code>get</code> to fetch the value inside an Option wrapper.
+    <br><br>
+    The recommended solution is to use <code>match</code> or <code>getOrElse</code>.
+    <br><br>
+    Example of wrong usage:
+    <br>
+</p>
+<pre>
+<code>
+val x = Some("Hello world")
+
+println(x.get)
+</code>
+</pre>
+<p>
+    The proper implementations:
+    <br>
+</p>
+<pre>
+<code>
+val x = Some("Hello world")
+
+x match
+    case Some(y) => println(y)
+    case None => println("Not found")
+
+println(x.getOrElse("Not Found"))
+</code>
+</pre>
+</body>
+</html>
