@@ -9,7 +9,7 @@ class OptionGetInspection extends OperationOnCollectionInspection {
 }
 
 object IllegalOptionGet extends SimplificationType {
-  override def hint: String = AaltoInspectionBundle.message("inspection.illegal.option.get.usage.description")
+  override def hint: String = AaltoInspectionBundle.message("inspection.option.get.usage.description")
 
 
   override def getSimplification(expr: ScExpression): Option[Simplification] = expr match {

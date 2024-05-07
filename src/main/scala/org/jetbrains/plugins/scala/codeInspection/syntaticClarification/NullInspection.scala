@@ -11,7 +11,7 @@ class NullInspection extends LocalInspectionTool {
     case expr: ScNullLiteral =>
       holder.registerProblem(
         expr,
-        AaltoInspectionBundle.message("inspection.illegal.null.usage.description")
+        AaltoInspectionBundle.message("inspection.null.usage.description")
       )
     case _ =>
   }
