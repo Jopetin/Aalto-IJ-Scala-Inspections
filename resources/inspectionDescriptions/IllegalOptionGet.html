@@ -1,33 +1,14 @@
 <html>
 <body>
 <p>
-    Reports usage of <code>get</code> to fetch the value inside an Option wrapper.
-    <br><br>
-    The recommended solution is to use <code>match</code> or <code>getOrElse</code>.
+    Reports calls to Option.get. Such calls are bug-prone and can generally be replaced by a <code>match</code> or <code>for</code> expression or by calling a different method.
     <br><br>
     Example of wrong usage:
     <br>
 </p>
 <pre>
 <code>
-val x = Some("Hello world")
-
-println(x.get)
-</code>
-</pre>
-<p>
-    The proper implementations:
-    <br>
-</p>
-<pre>
-<code>
-val x = Some("Hello world")
-
-x match
-    case Some(y) => println(y)
-    case None => println("Not found")
-
-println(x.getOrElse("Not Found"))
+if myOption.isDefined then myOption.get else -1
 </code>
 </pre>
 </body>
