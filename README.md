@@ -1,13 +1,22 @@
-# IntelliJ Scala inspection plugin
+# Aalto IntelliJ Scala inspections plugin
 
-This is a IJ plugin that adds additional live code inspection rules for Scala. 
+This IJ IDEA plugin adds additional live code inspection rules for Scala. They can be found under the *Aalto* group under the *Scala* section of inspections.
+By default they are ranked as warnings and are disabled.
 
-### Illegal usage of Option.get
+### Usage of *Option.get*
 
-Reports any usage of Option.get since it can lead to runtime errors.
+Reports any usage of Option.get since it can lead to runtime exceptions.
+
+### Usage of *Option.head* or *Option.last*
+
+Reports any usage of Option.head or Option.last since they too can lead to runtime exceptions.
+
+### Usage of *null*
+
+Reports any usage of null since Scala provides the safer *Option* wrapper for describing potentially undetermined values
 
 ## Quick Start
 
-- To run the plugin, run `runIDE` from the sbt shell.
+- To test the plugin, run `runIDE` from the sbt shell.
 
 
