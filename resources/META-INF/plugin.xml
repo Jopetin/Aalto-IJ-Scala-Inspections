@@ -16,8 +16,20 @@
         <localInspection implementationClass="org.jetbrains.plugins.scala.codeInspection.collections.OptionGetInspection"
                          bundle="messages.InspectionBundle"
                          key="inspection.illegal.option.get.usage.display.name"
-                         groupBundle="messages.ScalaInspectionBundle" groupPathKey="grouppath.scala.collections" groupKey="group.options"
-                         shortName="IllegalOptionGet" level="ERROR"
+                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="IllegalOptionGet" level="WARNING"
+                         enabledByDefault="false" language="Scala"/>
+        <localInspection implementationClass="org.jetbrains.plugins.scala.codeInspection.collections.OptionHeadOrLastInspection"
+                         bundle="messages.InspectionBundle"
+                         key="inspection.illegal.option.head.or.last.usage.display.name"
+                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="IllegalOptionHeadOrLast" level="WARNING"
+                         enabledByDefault="false" language="Scala"/>
+        <localInspection implementationClass="org.jetbrains.plugins.scala.codeInspection.syntaticClarification.NullInspection"
+                         bundle="messages.InspectionBundle"
+                         key="inspection.illegal.null.usage.display.name"
+                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="IllegalNull" level="WARNING"
                          enabledByDefault="false" language="Scala"/>
     </extensions>
 
