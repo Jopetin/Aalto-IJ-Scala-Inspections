@@ -4,7 +4,7 @@ lazy val inspections =
   project.in(file("."))
     .enablePlugins(SbtIdeaPlugin)
     .settings(
-      version := "0.0.1-SNAPSHOT",
+      version := "1.0.0",
       scalaVersion := "3.3.0",
       ThisBuild / intellijPluginName := "Aalto Scala inspections",
       ThisBuild / intellijBuild      := "231.9011.34",
@@ -13,7 +13,6 @@ lazy val inspections =
       Compile / javacOptions ++= "--release" :: "17" :: Nil,
       intellijPlugins += "com.intellij.properties".toPlugin ,
       intellijPlugins += "org.intellij.scala".toPlugin,
-      libraryDependencies += "com.eclipsesource.minimal-json" % "minimal-json" % "0.9.5" withSources(),
       Compile / unmanagedResourceDirectories += baseDirectory.value / "resources",
       Test / unmanagedResourceDirectories    += baseDirectory.value / "testResources",
 
