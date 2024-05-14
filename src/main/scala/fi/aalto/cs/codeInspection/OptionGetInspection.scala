@@ -1,6 +1,6 @@
 package fi.aalto.cs.codeInspection
 
-import org.jetbrains.plugins.scala.codeInspection.collections.{OperationOnCollectionInspection, Qualified, Simplification, SimplificationType, invocation, isOption, likeOptionClasses}
+import org.jetbrains.plugins.scala.codeInspection.collections.{OperationOnCollectionInspection, Simplification, SimplificationType, invocation, isOption, likeOptionClasses}
 import org.jetbrains.plugins.scala.lang.psi.api.expr.ScExpression
 
 import scala.collection.immutable.ArraySeq
