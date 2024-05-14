@@ -1,9 +1,8 @@
-package org.jetbrains.plugins.scala.codeInspection.syntaticClarification
+package fi.aalto.cs.codeInspection
 
 import com.intellij.codeInspection.{LocalInspectionTool, ProblemsHolder}
 import org.jetbrains.plugins.scala.codeInspection.PsiElementVisitorSimple
 import org.jetbrains.plugins.scala.lang.psi.api.base.literals.ScNullLiteral
-import org.jetbrains.plugins.scala.codeInspection.AaltoInspectionBundle
 
 
 class NullInspection extends LocalInspectionTool {

@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.scala.codeInspection;
+package fi.aalto.cs.codeInspection;
 
 import com.intellij.DynamicBundle;
 import org.jetbrains.annotations.Nls;
