@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>fi.aalto.cs.inspections</id>
+    <name>Aalto Scala Inspections</name>
+    <vendor>LeTech</vendor>
+    <version>1.0.0</version>
+
+    <description>This plugin expands the initial set of Scala code inspections offered by the Scala plugin. New inspections are used to enforce stricter code style requirements for students at Aalto University.</description>
+
+    <idea-version since-build="231.0"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.properties</depends>
+    <depends>org.intellij.scala</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.OptionGetInspection"
+                         bundle="messages.InspectionBundle"
+                         key="inspection.option.get.usage.display.name"
+                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="IllegalOptionGet" level="WARNING"
+                         enabledByDefault="false" language="Scala"/>
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.OptionHeadOrLastInspection"
+                         bundle="messages.InspectionBundle"
+                         key="inspection.option.head.or.last.usage.display.name"
+                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="IllegalOptionHeadOrLast" level="WARNING"
+                         enabledByDefault="false" language="Scala"/>
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.NullInspection"
+                         bundle="messages.InspectionBundle"
+                         key="inspection.null.usage.display.name"
+                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="IllegalNull" level="WARNING"
+                         enabledByDefault="false" language="Scala"/>
+    </extensions>
+
+</idea-plugin>
