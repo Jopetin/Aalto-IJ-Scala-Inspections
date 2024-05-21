@@ -14,21 +14,21 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <localInspection implementationClass="fi.aalto.cs.codeInspection.OptionGetInspection"
-                         bundle="messages.InspectionBundle"
+                         bundle="messages.AaltoInspectionBundle"
                          key="inspection.option.get.usage.display.name"
-                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalOptionGet" level="WARNING"
                          enabledByDefault="false" language="Scala"/>
         <localInspection implementationClass="fi.aalto.cs.codeInspection.OptionHeadOrLastInspection"
-                         bundle="messages.InspectionBundle"
+                         bundle="messages.AaltoInspectionBundle"
                          key="inspection.option.head.or.last.usage.display.name"
-                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalOptionHeadOrLast" level="WARNING"
                          enabledByDefault="false" language="Scala"/>
         <localInspection implementationClass="fi.aalto.cs.codeInspection.NullInspection"
-                         bundle="messages.InspectionBundle"
+                         bundle="messages.AaltoInspectionBundle"
                          key="inspection.null.usage.display.name"
-                         groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalNull" level="WARNING"
                          enabledByDefault="false" language="Scala"/>
     </extensions>
