@@ -8,7 +8,7 @@ import org.jetbrains.annotations.PropertyKey;
 
 public final class AaltoInspectionBundle extends DynamicBundle {
   @NonNls
-  private static final String BUNDLE = "messages.InspectionBundle";
+  private static final String BUNDLE = "messages.AaltoInspectionBundle";
 
   private static final AaltoInspectionBundle INSTANCE = new AaltoInspectionBundle();
 
