@@ -5,7 +5,7 @@ lazy val inspections =
     .enablePlugins(SbtIdeaPlugin)
     .settings(
       version := "1.0.0",
-      scalaVersion := "3.3.0",
+      scalaVersion := "3.4.0",
       ThisBuild / intellijPluginName := "Aalto Scala inspections",
       ThisBuild / intellijBuild      := "231.9011.34",
       ThisBuild / intellijPlatform   := IntelliJPlatform.IdeaCommunity,
