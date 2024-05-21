@@ -12,7 +12,7 @@ class OptionHeadOrLastInspection extends OperationOnCollectionInspection {
 object IllegalOptionHeadOrLast extends SimplificationType {
   override def hint: String = AaltoInspectionBundle.message("inspection.option.head.or.last.usage.description")
 
-  val headOrLastInvocation = invocation(Set("head", "last")).from(likeCollectionClasses)
+  private val headOrLastInvocation = invocation(Set("head", "last")).from(likeCollectionClasses)
 
   override def getSimplification(expr: ScExpression): Option[Simplification] = expr match {
     case headOrLastInvocation (qual) if isOption(qual) =>
