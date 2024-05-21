@@ -4,9 +4,11 @@ import com.intellij.codeInspection.{LocalInspectionTool, ProblemsHolder}
 import org.jetbrains.plugins.scala.codeInspection.PsiElementVisitorSimple
 import org.jetbrains.plugins.scala.lang.psi.api.base.literals.ScNullLiteral
 
-
-class NullInspection extends LocalInspectionTool {
-  override def buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitorSimple = {
+class NullInspection extends LocalInspectionTool:
+  override def buildVisitor(
+      holder: ProblemsHolder,
+      isOnTheFly: Boolean
+  ): PsiElementVisitorSimple = {
     case expr: ScNullLiteral =>
       holder.registerProblem(
         expr,
@@ -14,4 +16,3 @@ class NullInspection extends LocalInspectionTool {
       )
     case _ =>
   }
-}
