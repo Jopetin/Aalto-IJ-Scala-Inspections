@@ -1,10 +1,21 @@
 <idea-plugin>
     <id>fi.aalto.cs.inspections</id>
+<<<<<<< HEAD
     <name>Aalto Scala Inspections</name>
     <vendor>LeTech</vendor>
     <version>1.0.0</version>
 
     <description>This plugin expands the initial set of Scala code inspections offered by the Scala plugin. New inspections are used to enforce stricter code style requirements for students at Aalto University.</description>
+=======
+    <name>Additional Scala Inspections</name>
+    <vendor>LeTech</vendor>
+    <version>1.0.0</version>
+
+    <description>
+        This plugin expands the initial set of Scala code inspections offered by the Scala plugin.
+        These inspections are used to present code style requirements for students at Aalto University.
+    </description>
+>>>>>>> review
 
     <idea-version since-build="231.0"/>
 
@@ -14,6 +25,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <localInspection implementationClass="fi.aalto.cs.codeInspection.OptionGetInspection"
+<<<<<<< HEAD
                          bundle="messages.InspectionBundle"
                          key="inspection.option.get.usage.display.name"
                          groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
@@ -29,6 +41,23 @@
                          bundle="messages.InspectionBundle"
                          key="inspection.null.usage.display.name"
                          groupBundle="messages.InspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+=======
+                         bundle="messages.AaltoInspectionBundle"
+                         key="inspection.option.get.usage.display.name"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="IllegalOptionGet" level="WARNING"
+                         enabledByDefault="false" language="Scala"/>
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.OptionHeadOrLastInspection"
+                         bundle="messages.AaltoInspectionBundle"
+                         key="inspection.option.head.or.last.usage.display.name"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="IllegalOptionHeadOrLast" level="WARNING"
+                         enabledByDefault="false" language="Scala"/>
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.NullInspection"
+                         bundle="messages.AaltoInspectionBundle"
+                         key="inspection.null.usage.display.name"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+>>>>>>> review
                          shortName="IllegalNull" level="WARNING"
                          enabledByDefault="false" language="Scala"/>
     </extensions>
