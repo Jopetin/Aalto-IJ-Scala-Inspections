@@ -1,10 +1,13 @@
 <idea-plugin>
     <id>fi.aalto.cs.inspections</id>
-    <name>Aalto Scala Inspections</name>
+    <name>Additional Scala Inspections</name>
     <vendor>LeTech</vendor>
     <version>1.0.0</version>
 
-    <description>This plugin expands the initial set of Scala code inspections offered by the Scala plugin. New inspections are used to enforce stricter code style requirements for students at Aalto University.</description>
+    <description>
+        This plugin expands the initial set of Scala code inspections offered by the Scala plugin.
+        These inspections are used to present code style requirements for students at Aalto University.
+    </description>
 
     <idea-version since-build="231.0"/>
 
