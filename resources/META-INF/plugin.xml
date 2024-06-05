@@ -2,7 +2,7 @@
     <id>fi.aalto.cs.inspections</id>
     <name>Additional Scala Inspections</name>
     <vendor>LeTech</vendor>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <description>
         This plugin expands the initial set of Scala code inspections offered by the Scala plugin.
@@ -33,6 +33,12 @@
                          key="inspection.null.usage.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalNull" level="WARNING"
+                         enabledByDefault="false" language="Scala"/>
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.EffectFreeMethodInspection"
+                         bundle="messages.AaltoInspectionBundle"
+                         key="inspection.effect.free.method.display.name"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="EffectFreeMethod" level="WARNING"
                          enabledByDefault="false" language="Scala"/>
     </extensions>
 
