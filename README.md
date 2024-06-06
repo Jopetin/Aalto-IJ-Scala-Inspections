@@ -17,5 +17,9 @@ Reports any usage of Option.head or Option.last since they too can lead to runti
 
 Reports any usage of *null* since Scala provides the safer *Option* wrapper for describing potentially undetermined values.
 
+### Not using a value returned by an effect-free method
+
+Reports cases where effect-free methods are used without utilizing the returned value, effectively doing nothing. These methods are recognized from a custom annotation.
+
 
 
