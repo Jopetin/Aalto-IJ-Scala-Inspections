@@ -8,6 +8,11 @@
         This plugin expands the initial set of Scala code inspections offered by the Scala plugin.
         These inspections are used to present code style requirements for students at Aalto University.
     </description>
+    <change-notes><![CDATA[
+        <ul>
+            <li>Added a new inspection for unused results of effect-free methods</li>
+        </ul>
+    ]]></change-notes>
 
     <idea-version since-build="231.0"/>
 
