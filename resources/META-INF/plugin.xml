@@ -10,7 +10,7 @@
     </description>
     <change-notes><![CDATA[
         <ul>
-            <li>Added a new inspection for unused results of effect-free methods</li>
+            <li>Added a new inspection for unused results of side-effect-free methods</li>
         </ul>
     ]]></change-notes>
 
@@ -39,11 +39,11 @@
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalNull" level="WARNING"
                          enabledByDefault="false" language="Scala"/>
-        <localInspection implementationClass="fi.aalto.cs.codeInspection.EffectFreeMethodInspection"
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.SideEffectFreeMethodInspection"
                          bundle="messages.AaltoInspectionBundle"
                          key="inspection.effect.free.method.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
-                         shortName="EffectFreeMethod" level="WARNING"
+                         shortName="SideEffectFreeMethod" level="WARNING"
                          enabledByDefault="false" language="Scala"/>
     </extensions>
 

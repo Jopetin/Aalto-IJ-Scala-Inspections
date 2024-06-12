@@ -21,7 +21,7 @@ import org.jetbrains.plugins.scala.lang.psi.api.statements.ScFunctionDefinition
   * used as a parameter or chained to an another method call are checked through the class of the
   * parent element.
   */
-class EffectFreeMethodInspection extends LocalInspectionTool:
+class SideEffectFreeMethodInspection extends LocalInspectionTool:
 
   override def buildVisitor(
       holder: ProblemsHolder,
