@@ -26,25 +26,25 @@
                          key="inspection.option.get.usage.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalOptionGet" level="WARNING"
-                         enabledByDefault="false" language="Scala"/>
+                         enabledByDefault="true" language="Scala"/>
         <localInspection implementationClass="fi.aalto.cs.codeInspection.OptionHeadOrLastInspection"
                          bundle="messages.AaltoInspectionBundle"
                          key="inspection.option.head.or.last.usage.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalOptionHeadOrLast" level="WARNING"
-                         enabledByDefault="false" language="Scala"/>
+                         enabledByDefault="true" language="Scala"/>
         <localInspection implementationClass="fi.aalto.cs.codeInspection.NullInspection"
                          bundle="messages.AaltoInspectionBundle"
                          key="inspection.null.usage.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalNull" level="WARNING"
-                         enabledByDefault="false" language="Scala"/>
+                         enabledByDefault="true" language="Scala"/>
         <localInspection implementationClass="fi.aalto.cs.codeInspection.SideEffectFreeMethodInspection"
                          bundle="messages.AaltoInspectionBundle"
                          key="inspection.effect.free.method.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="SideEffectFreeMethod" level="WARNING"
-                         enabledByDefault="false" language="Scala"/>
+                         enabledByDefault="true" language="Scala"/>
     </extensions>
 
 </idea-plugin>
