@@ -1,5 +1,7 @@
 package fi.aalto.cs.codeInspection
 
+import com.intellij.codeInspection.options.OptPane
+import com.intellij.codeInspection.options.OptPane.{pane, string}
 import com.intellij.codeInspection.{LocalInspectionTool, ProblemsHolder}
 import com.intellij.psi.PsiElement
 import org.jetbrains.plugins.scala.codeInspection.PsiElementVisitorSimple
@@ -12,6 +14,8 @@ import org.jetbrains.plugins.scala.lang.psi.api.expr.{
 }
 import org.jetbrains.plugins.scala.lang.psi.api.statements.ScFunctionDefinition
 
+import scala.beans.BeanProperty
+
 /** Inspection used to check whether results from methods with given annotation are used in any way
   *
   * Essentially when finding a method call to a method with the given annotation, it checks whether
@@ -23,6 +27,19 @@ import org.jetbrains.plugins.scala.lang.psi.api.statements.ScFunctionDefinition
   */
 class SideEffectFreeMethodInspection extends LocalInspectionTool:
 
+  import org.jetbrains.plugins.scala.codeInspection.ui.CompilerInspectionOptions.*
+
+  @BeanProperty
+  var annotationName: String =
+    AaltoInspectionBundle.message("inspection.effect.free.method.annotation.name")
+
+  override def getOptionsPane: OptPane = pane(
+    string(
+      "annotationName",
+      AaltoInspectionBundle.message("inspection.effect.free.method.annotation.description")
+    )
+  )
+
   override def buildVisitor(
       holder: ProblemsHolder,
       isOnTheFly: Boolean
@@ -33,9 +50,7 @@ class SideEffectFreeMethodInspection extends LocalInspectionTool:
           ref.resolve() match
             case func: ScFunctionDefinition =>
               if func.annotations.exists(
-                  _.textMatches(
-                    AaltoInspectionBundle.message("inspection.effect.free.method.annotation.name")
-                  )
+                  _.textMatches(annotationName)
                 )
               then
                 var target: PsiElement          = method

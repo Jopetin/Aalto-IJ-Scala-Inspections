@@ -1,13 +1,17 @@
 <html>
 <body>
 <p>
-    Reports any calls to side-effect-free methods whose result is not stored or used further. This is to avoid mistakes where side-effect-free methods are mistaken as effectful. Side-effect-free methods are recognized from a custom annotation.
+    Reports any calls to side-effect-free methods whose result is not stored or used further.
+    This is to avoid mistakes where side-effect-free methods are mistaken as effectful.
+    Side-effect-free methods are recognized from a custom annotation with the name configured below.
     <br><br>
     Example of wrong usage:
     <br>
 </p>
 <pre>
 <code>
+class SideEffectFree extends StaticAnnotation
+
 @SideEffectFree
 def method(): Int =
     0
