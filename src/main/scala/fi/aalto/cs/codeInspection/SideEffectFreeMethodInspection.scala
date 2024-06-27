@@ -30,7 +30,7 @@ class SideEffectFreeMethodInspection extends LocalInspectionTool:
 
   @BeanProperty
   var annotationName: String =
-    AaltoInspectionBundle.message("inspection.effect.free.method.annotation.name")
+    AaltoInspectionBundle.message("inspection.immutable.class.annotation.name")
 
   override def getOptionsPane: OptPane = pane(
     string(

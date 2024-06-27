@@ -20,7 +20,7 @@ import scala.beans.BeanProperty
   * used as a parameter or chained to an another method call are checked through the class of the
   * parent element.
   */
-class SideEffectFreeClassInspection extends LocalInspectionTool:
+class ImmutableClassInspection extends LocalInspectionTool:
 
   import org.jetbrains.plugins.scala.codeInspection.ui.CompilerInspectionOptions.*
 
@@ -69,7 +69,7 @@ class SideEffectFreeClassInspection extends LocalInspectionTool:
                       holder.registerProblem(
                         // Highlights only the method call in question
                         method.getFirstChild.getLastChild,
-                        AaltoInspectionBundle.message("inspection.effect.free.class.description")
+                        AaltoInspectionBundle.message("inspection.immutable.class.description")
                       )
                 case _ =>
             case _ =>

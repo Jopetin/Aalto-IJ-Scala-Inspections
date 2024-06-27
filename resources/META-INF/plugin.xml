@@ -45,11 +45,11 @@
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="SideEffectFreeMethod" level="WARNING"
                          enabledByDefault="true" language="Scala"/>
-        <localInspection implementationClass="fi.aalto.cs.codeInspection.SideEffectFreeClassInspection"
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.ImmutableClassInspection"
                          bundle="messages.AaltoInspectionBundle"
-                         key="inspection.effect.free.class.display.name"
+                         key="inspection.immutable.class.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
-                         shortName="SideEffectFreeClass" level="WARNING"
+                         shortName="ImmutableClass" level="WARNING"
                          enabledByDefault="true" language="Scala"/>
     </extensions>
 
