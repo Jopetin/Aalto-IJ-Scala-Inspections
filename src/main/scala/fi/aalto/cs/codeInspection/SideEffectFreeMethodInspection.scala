@@ -49,7 +49,7 @@ class SideEffectFreeMethodInspection extends LocalInspectionTool:
           ref.resolve() match
             case func: ScFunctionDefinition =>
               if func.annotations.exists(
-                  _.textMatches("@" + annotationName)
+                  _.textMatches(annotationName)
                 )
               then
                 var target: PsiElement          = method
