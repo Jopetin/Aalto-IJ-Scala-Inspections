@@ -13,7 +13,6 @@ import org.jetbrains.plugins.scala.lang.psi.api.expr.{
   ScReferenceExpression
 }
 import org.jetbrains.plugins.scala.lang.psi.api.statements.ScFunctionDefinition
-
 import scala.beans.BeanProperty
 
 /** Inspection used to check whether results from methods with given annotation are used in any way
@@ -50,7 +49,7 @@ class SideEffectFreeMethodInspection extends LocalInspectionTool:
           ref.resolve() match
             case func: ScFunctionDefinition =>
               if func.annotations.exists(
-                  _.textMatches(annotationName)
+                  _.textMatches("@" + annotationName)
                 )
               then
                 var target: PsiElement          = method
