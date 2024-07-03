@@ -23,5 +23,7 @@ Reports cases where side-effect-free methods are used without utilizing the retu
 
 There are two version of this inspection: one reacts to annotated methods whereas the other allows for annoting a class and then reacting to all of its methods.
 
+Note that this inspection is still a work in progress and fails to recognize certain types of usage (e.g. inside loops).
+
 
 
