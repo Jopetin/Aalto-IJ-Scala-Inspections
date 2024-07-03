@@ -2,12 +2,18 @@
     <id>fi.aalto.cs.inspections</id>
     <name>Additional Scala Inspections</name>
     <vendor>LeTech</vendor>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <description>
         This plugin expands the initial set of Scala code inspections offered by the Scala plugin.
         These inspections are used to present code style requirements for students at Aalto University.
     </description>
+    <change-notes><![CDATA[
+        <ul>
+            <li>Added new inspections for unused results of side-effect-free methods</li>
+            <li>Changed all inspections to be enabled by default</li>
+        </ul>
+    ]]></change-notes>
 
     <idea-version since-build="231.0"/>
 
@@ -21,19 +27,31 @@
                          key="inspection.option.get.usage.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalOptionGet" level="WARNING"
-                         enabledByDefault="false" language="Scala"/>
+                         enabledByDefault="true" language="Scala"/>
         <localInspection implementationClass="fi.aalto.cs.codeInspection.OptionHeadOrLastInspection"
                          bundle="messages.AaltoInspectionBundle"
                          key="inspection.option.head.or.last.usage.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalOptionHeadOrLast" level="WARNING"
-                         enabledByDefault="false" language="Scala"/>
+                         enabledByDefault="true" language="Scala"/>
         <localInspection implementationClass="fi.aalto.cs.codeInspection.NullInspection"
                          bundle="messages.AaltoInspectionBundle"
                          key="inspection.null.usage.display.name"
                          groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
                          shortName="IllegalNull" level="WARNING"
-                         enabledByDefault="false" language="Scala"/>
+                         enabledByDefault="true" language="Scala"/>
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.SideEffectFreeMethodInspection"
+                         bundle="messages.AaltoInspectionBundle"
+                         key="inspection.effect.free.method.display.name"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="SideEffectFreeMethod" level="WARNING"
+                         enabledByDefault="true" language="Scala"/>
+        <localInspection implementationClass="fi.aalto.cs.codeInspection.ImmutableClassInspection"
+                         bundle="messages.AaltoInspectionBundle"
+                         key="inspection.immutable.class.display.name"
+                         groupBundle="messages.AaltoInspectionBundle" groupPathKey="grouppath.scala" groupKey="group.aalto"
+                         shortName="ImmutableClass" level="WARNING"
+                         enabledByDefault="true" language="Scala"/>
     </extensions>
 
 </idea-plugin>

@@ -4,7 +4,7 @@ lazy val inspections =
   project.in(file("."))
     .enablePlugins(SbtIdeaPlugin)
     .settings(
-      version := "1.0.0",
+      version := "1.1.0",
       scalaVersion := "3.4.0",
       ThisBuild / intellijPluginName := "Additional Scala Inspections",
       ThisBuild / intellijBuild      := "231.9011.34",
