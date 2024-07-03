@@ -11,6 +11,7 @@
     <change-notes><![CDATA[
         <ul>
             <li>Added new inspections for unused results of side-effect-free methods</li>
+            <li>Changed all inspections to be enabled by default</li>
         </ul>
     ]]></change-notes>
 

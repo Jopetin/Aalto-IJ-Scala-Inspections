@@ -19,7 +19,9 @@ Reports any usage of *null* since Scala provides the safer *Option* wrapper for 
 
 ### Not using a value returned by a side-effect-free method
 
-Reports cases where side-effect-free methods are used without utilizing the returned value, effectively doing nothing. These methods are recognized from a custom annotation.
+Reports cases where side-effect-free methods are used without utilizing the returned value, effectively doing nothing. These methods are recognized from an annotation which can be configured from the inspection settings.
+
+There are two version of this inspection: one reacts to annotated methods whereas the other allows for annoting a class and then reacting to all of its methods.
 
 
 
